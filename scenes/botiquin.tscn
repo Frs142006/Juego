@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://gh1ojcns603m"]
+
+[ext_resource type="Texture2D" uid="uid://c1wx6duy5r4k6" path="res://assets/payaso/sprite_23.png" id="1_16k7k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8bnen"]
+radius = 19.5965
+
+[node name="Botiquin" type="StaticBody2D"]
+scale = Vector2(1.32767, 1.38519)
+collision_layer = 2
+
+[node name="BotiquinCollsion" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8bnen")
+
+[node name="SpriteBotiquin" type="Sprite2D" parent="."]
+position = Vector2(0, 1.44385)
+scale = Vector2(0.561405, 0.598225)
+texture = ExtResource("1_16k7k")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpnmmo2864oja"]
+
+[ext_resource type="Texture2D" uid="uid://df5uifcg2sr7n" path="res://assets/payaso/sprite_08.png" id="1_ww7l3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q125j"]
+radius = 19.0263
+
+[node name="Espada" type="StaticBody2D"]
+collision_layer = 2
+
+[node name="EspadaCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_q125j")
+
+[node name="SpriteEspada" type="Sprite2D" parent="."]
+texture = ExtResource("1_ww7l3")

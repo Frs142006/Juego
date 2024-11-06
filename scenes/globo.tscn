@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl1qlh7iickih"]
+
+[ext_resource type="Texture2D" uid="uid://b4h0iyo0ouegk" path="res://assets/payaso/sprite_20.png" id="1_fl1yv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ebjqi"]
+radius = 23.0868
+
+[node name="Globo" type="StaticBody2D"]
+collision_layer = 2
+
+[node name="GloboCollider" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ebjqi")
+
+[node name="SpriteGlobo" type="Sprite2D" parent="."]
+texture = ExtResource("1_fl1yv")

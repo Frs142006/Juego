@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgqjubwo0bw76"]
+
+[ext_resource type="Texture2D" uid="uid://ckipus6nfcorn" path="res://assets/payaso/sprite_09.png" id="1_yyb05"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tli4w"]
+radius = 23.0
+
+[node name="Armadura" type="StaticBody2D"]
+collision_layer = 2
+
+[node name="ArmaduraCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tli4w")
+
+[node name="SpriteArmadura" type="Sprite2D" parent="."]
+position = Vector2(1, 1)
+scale = Vector2(0.84375, 0.75)
+texture = ExtResource("1_yyb05")

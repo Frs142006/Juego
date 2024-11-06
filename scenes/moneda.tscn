@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnkehjx0npjoq"]
+
+[ext_resource type="Script" path="res://scripts/moneda.gd" id="1_fkyj5"]
+[ext_resource type="Texture2D" uid="uid://dv4hhf284v6eq" path="res://assets/mapa/moneda.png" id="1_vh1sg"]
+[ext_resource type="Texture2D" uid="uid://ct8db4p7xso58" path="res://assets/mapa/moneda2.png" id="2_41o16"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f1h17"]
+radius = 15.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3r4n8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vh1sg")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_41o16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_vh1sg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Moneda" type="StaticBody2D" groups=["monedas"]]
+position = Vector2(77, 4)
+collision_layer = 2
+script = ExtResource("1_fkyj5")
+
+[node name="MonedaCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_f1h17")
+
+[node name="SpriteMoneda" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2.08616e-06, 0)
+scale = Vector2(0.429688, 0.414063)
+sprite_frames = SubResource("SpriteFrames_3r4n8")
+frame_progress = 0.628908
